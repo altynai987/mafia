@@ -3,6 +3,7 @@
   "short_name": "Мафия",
   "description": "Официальный организатор интеллектуальных игр Мафия в Москве",
   "start_url": "/mafia/index.html",
+  "id": "/mafia/index.html",
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#D4AF37",
