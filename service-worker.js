@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mafia-cache-v2';
+const CACHE_NAME = 'mafia-cache-v4';
 const urlsToCache = [
   '/mafia/',
   '/mafia/index.html',
@@ -8,6 +8,7 @@ const urlsToCache = [
   '/mafia/images/icon-192.png',
   '/mafia/images/icon-512.png',
   '/mafia/images/banner.jpg',
+  '/mafia/images/mafia-banner.jpg',
   '/mafia/images/table.jpg'
 ];
 
@@ -54,6 +55,11 @@ self.addEventListener('fetch', function(event) {
         }
         console.log('🌐 Из сети:', event.request.url);
         return fetch(event.request);
+      })
+      .catch(function(error) {
+        console.log('❌ Ошибка:', error);
+        // Возвращаем страницу из кеша, если есть
+        return caches.match('/mafia/index.html');
       })
   );
 });
