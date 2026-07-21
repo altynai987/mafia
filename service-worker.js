@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mafia-cache-v1';
+const CACHE_NAME = 'mafia-cache-v2';
 const urlsToCache = [
   '/mafia/',
   '/mafia/index.html',
